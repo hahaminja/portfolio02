@@ -189,6 +189,10 @@ a{
     padding-right: 40px;
     background-color: #fff;
 }
+.slide-wrap > .slide-box .content .img-box{
+    background-size: contain;
+background-position: bottom;
+}
 .slide-wrap > .slide-box .content .info-box > div{
     font-size: 14px;
     line-height: 30px;
@@ -203,12 +207,15 @@ a{
     margin: 30px auto;
     height: 2px;
     background-color: #ddd;
+    position: relative;
 }
 .slide-wrap > .control > .progress-box > .bar{
     width: 50%;
     height: 2px;
     background-color: #333;
     transition: 0.5s;
+    position:absolute;
+    left: 0;
 }
 /* progress-box */
 /*  arrows-btn st*/

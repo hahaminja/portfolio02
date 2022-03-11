@@ -25,5 +25,8 @@ $(document).ready(function(){
       $(".slide-box").slick('slickNext')
     })
     // 프로그레스 바
+    $('.slide-box').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      console.log(nextSlide);
+    });
     
   })
