@@ -1,15 +1,22 @@
 $(document).ready(function(){
-  
+  // 제품슬라이드박스
     $(".slide-box").slick({
       slidesToShow: 4 ,
       infinite: false , 
       arrows: false , 
     })
+    // 스토어 슬라이드박스
+    var indexNum = 0
+  
+  setInterval(function(){
+     if(indexNum > 2){
+      indexNum = 0
+    }
+    $(".content").css({"left" : -1100 * indexNum })
+    indexNum++
+  }, 3000);
+  
     
-    //슬라이드 좌우버튼
-    // 영역에 마우스 올리면 다음 버튼 생김
-    //버튼 누르면 이전 버튼 + 바 오른쪽 이동 + 다음 버튼 사라짐
-    // 이전 버튼..마우스 떠나면 이전 버튼 사라짐
     $(".slide-wrap").mouseover(function(){
       $(".arrows-btn > .next-btn").addClass("active")
     });
@@ -29,4 +36,4 @@ $(document).ready(function(){
       console.log(nextSlide);
     });
     
-  })
+})

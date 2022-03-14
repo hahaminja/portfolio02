@@ -1,17 +1,13 @@
-/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-    .notosanskr * { 
-    font-family: 'Noto Sans KR', sans-serif;
-    } */
-    @font-face {
-        font-family: 'SUIT-ExtraLight';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
+    
+ @font-face {
+    font-family: 'KOTRA_GOTHIC';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html > body{
-    font-family: 'SUIT-ExtraLight' ;
+    font-family: 'KOTRA_GOTHIC';
     background-color: #fffef2;
 }
 /* 노멀라이징 */
@@ -47,11 +43,20 @@ a{
 .w-50-box{
     width: 50%;
 }
-.w-55-box{
-    width: 55%;
+.w-70-box{
+    width: 70%;
+}
+.w-60-box{
+    width: 60%;
+}
+.w-40-box{
+    width: 40%;
 }
 .h-53-box{
     padding-bottom: 53%;
+}
+.h-5625-box{
+    padding-bottom: 56.25%;
 }
 .h-64-box{
     padding-bottom: 64%;
@@ -59,21 +64,45 @@ a{
 .h-362-box{
     padding-bottom: 36.25%;
 }
+.h-36-box{
+    padding-bottom: 36%;
+}
+.h-807-box{
+    padding-bottom: 80.7%;
+}
+.h-976-box{
+    padding-bottom: 97.6%;
+}
 .h-100-box{
     padding-bottom: 100%;
+}
+.h-90-box{
+    padding-bottom: 90%;
+}
+.h-141-box{
+    padding-bottom: 141%;
 }
 .flex{
     display: flex;
 }
-
-.flex1{
-    flex: 1 1 0;
+.w-full{
+    width: 100%;
 }
-
+.mr-auto{
+    margin-right: auto;
+}
+.flex1{
+    flex:1 1 0;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+.flex-shrink{
+    flex-shrink: 0;
+}
 .text-center{
     text-align: center;
 }
-
 .img-box{
     background-position: center;
     background-repeat: no-repeat;
@@ -98,8 +127,26 @@ a{
 .h-40-box{
     height: 40px;
 }
+.h-120-box{
+    height: 120px;
+}
+.mt-150{
+    margin-top: 150px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.gap-40{
+    gap: 40px;
+}
 .self-center{
     align-self: center;
+}
+.pl-80px{
+    padding-left: 80px;
 }
 .pl-30px{
     padding-left: 30px;
@@ -107,8 +154,11 @@ a{
 .pr-30px{
     padding-right: 30px;
 }
-.ml-5{
-    margin-left: 5%;
+.mb-20px{
+    margin-bottom: 20px;
+}
+.w-600-box{
+    width: 600px;
 }
 .absolute{
     position: absolute;
@@ -121,36 +171,97 @@ a{
 .color_ef2{
     color:#fffef2;
 }
+.block{
+    display: block;
+}
+.mx-100{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.flex-col{
+    flex-direction: column;
+}
+
 /* 스타일 */
 /* 탑메뉴 시작 */
+.nav-2-depth{
+    display: none;
+}
 .menu-wrap > .menu-box{
     max-width: 100%;
     background-color:#333;
     color: #fffef2;
     font-size: 13px;
     line-height: 80px;
+    position: relative;
 }
 
 .menu-wrap > .menu-box ul > li{
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .menu-wrap > .menu-box > ul > li.search {
     font-size: 18px;
 }
 /* 탑메뉴 끝 */
-/* 메인1 */
-.main-box .text-box{
+/* nav-2-depth-wrap 시작 */
+.nav-2-depth-wrap > .nav-2-depth{
+    background-color:rgb(240, 239, 224);
+    width: 100%;
+    height: calc(100% - 80px);
+    position: absolute;
+    z-index: 999;
+    top: 80px;
+    left: 0;
+    border-top: 1px solid rgba(51, 51, 51, 0.2);
+}
+.nav-2-depth-wrap > .nav-2-depth > .left-nav{
+    font-size: 17px;
+    max-width: 70%;
+}
+.nav-menu-wrap{
+    background-color:chocolate;
+}
+.nav-menu-wrap > .nav-menu{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.nav-menu-wrap > .nav-menu > ul > li > a{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-2-depth-wrap > .nav-2-depth > .right-nav{
+    max-width: 30%;
+}
+.nav-2-depth-wrap > .nav-2-depth > .right-nav > .img-box{
+    height: 100%;
+}
+
+/* nav-2-depth-wrap 끝 */
+/* 동영상 */
+.main-box{
+    overflow: hidden;
+}
+.video{
+    width: 110%;
+}
+/* 동영상 끝 */
+/* text-box */
+.text-box{
     width: 600px;
     line-height: 27px;
 }
-.main-box .text-box p{
+.text-box p{
     font-size: 14px;
 }
-.main-box .text-box > h2{
+.text-box > h2{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.main-box .text-box > .view{
+.text-box > .view{
     width: 300px;
     margin-top: 30px;
     padding: 15px 20px;
@@ -158,40 +269,39 @@ a{
     cursor: pointer;
     position: relative;
 }
-.main-box .text-box > .view .arrow-rig{
+.text-box > .view .arrow-rig{
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
-.main-box .text-box > .view:hover{
+.text-box > .view:hover{
     background-color: #fffef2;
     color: #333;
 }
-.main-box .text-box > .view.black{
+.text-box > .view.black{
     border: 1px solid #333;
 }
-.main-box .text-box > .view.black:hover{
+.text-box > .view.black:hover{
     background-color: #333;
     color:#fffef2 ;
 }
-/* 메인1 */
+/* text-box */
 /* 슬라이드1 시작*/
 .slide-wrap{
-    margin-top: 150px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 .slide-wrap > .slide-box{
-    max-width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: #fff;
+    width: 100%;
+    padding: 50px 80px;
 }
 .slide-wrap > .slide-box .content .img-box{
     background-size: contain;
-background-position: bottom;
+    background-position: bottom;
 }
 .slide-wrap > .slide-box .content .info-box > div{
     font-size: 14px;
@@ -201,15 +311,15 @@ background-position: bottom;
 .slide-wrap > .slide-box  .content:hover .info-box > .text-1{
     text-decoration: underline;
 }
-/* progress-box */
-.slide-wrap > .control > .progress-box{
+/* slide-wrpap > progress-box 시작 */
+.slide-wrap .control > .progress-box{
     width: 90%;
-    margin: 30px auto;
+    margin: 0 auto;
     height: 2px;
     background-color: #ddd;
     position: relative;
 }
-.slide-wrap > .control > .progress-box > .bar{
+.slide-wrap .control > .progress-box > .bar{
     width: 50%;
     height: 2px;
     background-color: #333;
@@ -217,48 +327,153 @@ background-position: bottom;
     position:absolute;
     left: 0;
 }
-/* progress-box */
-/*  arrows-btn st*/
-.slide-wrap > .control > .arrows-btn{
+/* slide-wrpap > progress-box 끝 */
+/*  slide-wrpap > arrows-btn 시작*/
+.slide-wrap .control > .arrows-btn{
     font-size: 30px;
     color: #fff;
     cursor: pointer;
 }
-.slide-wrap > .control > .arrows-btn div{
+.slide-wrap .control > .arrows-btn div{
     width: 80px;
     height: 80px;
     background-color:#333;
     text-align: center;
     line-height: 80px;
 }
-.slide-wrap > .control > .arrows-btn > .prev-btn{
+.slide-wrap .control > .arrows-btn > .prev-btn{
     position: absolute;
     left: -80px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.5s;
 }
-.slide-wrap > .control > .arrows-btn > .prev-btn.active{
+.slide-wrap .control > .arrows-btn > .prev-btn.active{
     left: 0;
 }
-.slide-wrap > .control > .arrows-btn > .next-btn{
+.slide-wrap .control > .arrows-btn > .next-btn{
     position: absolute;
     right: -80px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.5s;
 }
-.slide-wrap > .control > .arrows-btn > .next-btn.active{
+.slide-wrap .control > .arrows-btn > .next-btn.active{
     right:0;
 }
-/*  arrows-btn en*/
+/*  slide-wrpap > arrows-btn 끝*/
 /* 슬라이드1 끝 */
-/* 메인2 */
-.main02-wrap > .main-box{
-    margin-top: 150px;
+/*  product-wrap st*/
+.product-wrap > .product-box{
+    height: 700px;
+}
+.product-wrap > .product-box div{
+    position: relative;
+}
+.product-wrap > .product-box .img-box{
+    height: 100%;
+    background-size: 270%;
+    background-position: bottom;
+}
+.product-wrap > .product-box div .info-box{
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.product-wrap > .product-box div .info-box > p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product-wrap > .product-box div .info-box > p:nth-of-type(2){
+    font-size: 14px;
+}
+.product-wrap > .product-box div .info-box a > p{
+    text-decoration: underline;
+}
+/*  product-wrap en*/
+/* slide-store st  */
+.slide-store{
+    max-width: 60%;
+}
+.slide-store> .slide-store-wrap {
+    max-width: 1100px;
+    overflow: hidden; 
+}
+.slide-store> .slide-store-wrap > .content{
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+}
+.slide-store> .slide-store-wrap > .content > img{
     max-width: 100%;
+    display: block;
 }
-.main02-wrap > .main-box > .main-image{
-  
+/* slide-store en  */
+/* famous-sayings st */
+.famous-sayings > div{
+    max-width: 50%;
+    padding: 200px 40px;
+    margin: 0 auto;
 }
-/* 메인2 */
+.famous-sayings > div h1{
+    margin-bottom: 20px;
+}
+.famous-sayings > div p{
+    font-size: 14px;
+}
+/* famous-sayings en*/
+.footer-box{
+    background-color: #252525;
+    color: #fffef2;
+}
+.footer-box > .container{
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.footer-box > .container > .box{
+    width: 25%;
+    padding: 15px 30px;
+    font-size: 14px;
+    flex-shrink:0;
+}
+.footer-box > .container .email-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid #fffef2;
+    background-color: #252525;
+    border-radius: 3px;
+}
+.footer-box > .container .checkbox{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.footer-box > .container > .box > p{
+    position: relative;
+    margin-bottom: 20px;
+}
+.footer-box > .container > .box > p::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color:#fffef2;
+    position: absolute;
+    bottom: calc(-50%);
+    left: 0;
+}
+.footer-box > .container > .box > ul > li > a{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-box > .container > .box:nth-child(4) > ul > li > a{
+    text-decoration: underline;
+}
+.footer-box > .bottom-logo-box{
+    border-top: 3px solid #fffef2;
+    padding: 20px 30px;
+    background-color: #252525;
+}
