@@ -40,6 +40,9 @@ a{
     max-width: 100%;
     position: relative;
 }
+.w-full{
+    width: 100%;
+}
 .w-50-box{
     width: 50%;
 }
@@ -139,6 +142,9 @@ a{
 .mt-50{
     margin-top: 50px;
 }
+.mt-30{
+    margin-top: 30px;
+}
 .gap-40{
     gap: 40px;
 }
@@ -181,12 +187,11 @@ a{
 .flex-col{
     flex-direction: column;
 }
-
+.w-33-box{
+    width: calc(100% / 3);
+}
 /* 스타일 */
 /* 탑메뉴 시작 */
-.nav-2-depth{
-    display: none;
-}
 .menu-wrap > .menu-box{
     max-width: 100%;
     background-color:#333;
@@ -205,9 +210,14 @@ a{
 }
 /* 탑메뉴 끝 */
 /* nav-2-depth-wrap 시작 */
+.nav-2-depth{
+    /* display: none; */
+}
 .nav-2-depth-wrap > .nav-2-depth{
     background-color:rgb(240, 239, 224);
     width: 100%;
+    font-size: 16px;
+    line-height: 30px;
     height: calc(100% - 80px);
     position: absolute;
     z-index: 999;
@@ -215,40 +225,34 @@ a{
     left: 0;
     border-top: 1px solid rgba(51, 51, 51, 0.2);
 }
-.nav-2-depth-wrap > .nav-2-depth > .left-nav{
-    font-size: 17px;
-    max-width: 70%;
-}
-.nav-menu-wrap{
-    background-color:chocolate;
-}
-.nav-menu-wrap > .nav-menu{
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-.nav-menu-wrap > .nav-menu > ul > li > a{
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.nav-2-depth-wrap > .nav-2-depth > .right-nav{
-    max-width: 30%;
-}
-.nav-2-depth-wrap > .nav-2-depth > .right-nav > .img-box{
+.nav-2-depth-wrap > .nav-2-depth > .nav-box01{
+    width: calc(100% / 6);
     height: 100%;
 }
+.nav-2-depth-wrap > .nav-2-depth > .nav-box02{
+    width: calc(100% / 6);
+    height: 100%;
 
+}
+.nav-2-depth-wrap > .nav-2-depth > .nav-box03{
+    width: calc(100% / 3);
+    height: 100%;
+}
+.nav-2-depth-wrap > .nav-2-depth > .nav-box03 > .info-text > p{
+    font-size: 14px;
+}
+.nav-2-depth-wrap > .nav-2-depth > .nav-box03 > .info-text > .img-box{
+    background-size: contain;
+    width: 80%;
+}
+.nav-2-depth-wrap > .nav-2-depth > .nav-box04{
+    width: calc(100% / 3);
+    height: 100%;
+}
+.nav-2-depth-wrap > .nav-2-depth > .nav-box04 > .img-box{
+    height: 100%;
+}
 /* nav-2-depth-wrap 끝 */
-/* 동영상 */
-.main-box{
-    overflow: hidden;
-}
-.video{
-    width: 110%;
-}
-/* 동영상 끝 */
 /* text-box */
 .text-box{
     width: 600px;
